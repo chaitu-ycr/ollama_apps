@@ -1,10 +1,10 @@
-site_name: python_project_template
-site_url: https://chaitu-ycr.github.io/python_project_template/
-site_description: "My Python Projects Template"
+site_name: ollama_apps
+site_url: https://chaitu-ycr.github.io/ollama_apps/
+site_description: "ollama apps. python based apps."
 site_author: chaitu-ycr
 
-repo_name: chaitu-ycr/python_project_template
-repo_url: https://github.com/chaitu-ycr/python_project_template
+repo_name: chaitu-ycr/ollama_apps
+repo_url: https://github.com/chaitu-ycr/ollama_apps
 edit_uri: blob/main/docs/
 
 nav:

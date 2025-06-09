@@ -1,2 +1,2 @@
 
-::: src.python_project_template.app
+::: src.ollama_apps.web_app
