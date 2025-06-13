@@ -24,7 +24,7 @@ if exist "%VENV_PATH%" (
     echo Upgrading pip, installing uv, and syncing dependencies...
     "%PYTHON_EXE%" -m pip install --upgrade pip
     "%PYTHON_EXE%" -m pip install --upgrade uv
-    "%PYTHON_EXE%" -m uv sync --extra dev --link-mode=copy
+    "%PYTHON_EXE%" -m uv sync --link-mode=copy
     echo Completed installing tool dependencies.
     popd
     goto :EOF

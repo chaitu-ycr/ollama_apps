@@ -1,2 +1,2 @@
 
-::: src.ollama_apps.web_app
+::: src.ollama_apps.app

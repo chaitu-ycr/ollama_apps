@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "ollama apps. python based apps."
 license = { file = "LICENSE" }
 readme = "README.md"
-requires-python = ">=3.9, <=3.13"
+requires-python = ">=3.11, <=3.14"
 authors = [{ name = "chaitu-ycr", email = "chaitu.ycr@gmail.com" }]
 keywords = ["python", "ollama", "experiments"]
 classifiers = [
@@ -13,24 +13,52 @@ classifiers = [
     "Operating System :: Microsoft :: Windows"
 ]
 dependencies = [
-    "beautifulsoup4",
-    "chromadb",
+    # Core LangChain packages
     "langchain",
     "langchain-community",
-    "ollama",
-    "openpyxl",
-    "pandas",
-    "pypdf",
-    "python-docx",
-    "python-dotenv",
-    "python-pptx",
-    "requests",
+    "langchain-ollama",
+    "langchain-huggingface",
+    "langchain-core",
+    "langchain-unstructured",
+
+    # Vector store
+    "faiss-cpu",
+
+    # Embeddings
     "sentence-transformers",
-    "streamlit",
+
+    # Document loaders and parsing
+    "unstructured",
+    "pdfminer.six",
+    "PyMuPDF",
+    "python-docx",
+    "python-pptx",
+    "openpyxl",
+    "xlrd",
+    "pandas",
+    "beautifulsoup4",
+    "html5lib",
+
+    # UI
+    "gradio",
+
+    # Utilities
+    "tqdm",
+    "pydantic",
+
+    # other
+    "certifi",
+    "huggingface_hub[hf_xet]",
+    "python-magic",
+    "python-magic-bin",
 ]
 
 [project.optional-dependencies]
 dev = [
+    # formatter
+    "ruff",
+
+    # documentation
     "mkdocs-material",
     "mkdocstrings-python",
     "mkdocs-macros-plugin",
@@ -41,6 +69,13 @@ dev = [
 homepage = "https://github.com/chaitu-ycr/ollama_apps"
 repository = "https://github.com/chaitu-ycr/ollama_apps"
 documentation = "https://chaitu-ycr.github.io/ollama_apps/"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
 
 [build-system]
 requires = ["uv_build"]
